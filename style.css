@@ -1,0 +1,61 @@
+
+
+#poisk {
+  margin:2px;
+}
+#navbar{
+  background: #bd1111;
+  }           /* id NAV BAR*/
+
+.menu  {
+  display: flex;
+  padding:  10px
+}
+.menu li  {
+
+  padding:  10px
+}
+
+.nav-li:hover {
+      color: black;
+      background-color: white;
+
+
+     }
+.nav-li {
+  display:block;
+
+           color: black;
+           background-color: white;
+
+
+          }
+
+  .button{background-color:#000;color: #FFF;
+          display: inline-block;
+          border-radius: 4px;
+   }
+  .button:hover{color: #FFF;}
+  .button:focus{color: #FFF;}
+
+
+
+
+
+
+
+
+              /* id  POISK*/
+.narez{color: #bd1111;
+        font-size: 20px;
+}
+.narez:hover{color: #bd1111;
+        font-size: 20px;
+}
+
+.glatko{color: #027a06;
+        font-size: 20px;
+}
+.glatko:hover{color: #027a06;
+        font-size: 20px;
+}
