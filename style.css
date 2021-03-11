@@ -4,7 +4,9 @@
 }
 #navbar{
   background: #bd1111;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
   }           /* id NAV BAR*/
+
 .row  {
   display: flex;
   justify-content: space-between;
@@ -18,21 +20,20 @@
   text-align: center;
   padding: 5px 15px 5px 10px;
   color: white;
+  font-weight: bold;
+  font-size: 13px
 }
 .header_menu:hover {
   color: black;
   text-decoration: none;
   background-color: white;
-
 }
-
   .button{background-color:#000;color: #FFF;
           display: inline-block;
           border-radius: 4px;
    }
   .button:hover{color: #FFF;}
   .button:focus{color: #FFF;}
-
               /* id  POISK*/
 .narez{color: #bd1111;
         font-size: 20px;
@@ -40,7 +41,6 @@
 .narez:hover{color: #bd1111;
         font-size: 20px;
 }
-
 .glatko{color: #027a06;
         font-size: 20px;
 }
@@ -53,12 +53,17 @@
     flex-direction: column;
     align-items: center;
     }
+    #header_top > .container >.row {
+
+      flex-direction: column;
+      align-items: center;
+
+    }
   .header_menu{
     display: none;
   }
   .click{
     display: block;
-
   }
 
   .icon  {
@@ -66,5 +71,12 @@
      cursor: pointer;
      padding: 5px 15px 5px 10px;
 
+
    }
+}
+@media screen and (max-width: 1000px) {
+  .header_menu   {
+
+
+
 }
