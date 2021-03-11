@@ -1,6 +1,4 @@
-sss
-xxax
-asas
+
 #poisk {
   margin:2px;
 }
@@ -8,29 +6,24 @@ asas
   background: #bd1111;
   }           /* id NAV BAR*/
 
-.menu  {
+.row  {
   display: flex;
-  padding:  10px
+  justify-content: space-between;
+
 }
-.menu li  {
+.header_menu  {
+  text-align: center;
+  padding: 5px 15px 5px 10px;
+  color: white;
 
-  padding:  10px
+
 }
+.header_menu:hover {
+  color: black;
+  text-decoration: none;
+  background-color: white;
 
-.nav-li:hover {
-      color: black;
-      background-color: white;
-
-
-     }
-.nav-li {
-  display:block;
-
-           color: black;
-           background-color: white;
-
-
-          }
+}
 
   .button{background-color:#000;color: #FFF;
           display: inline-block;
@@ -38,13 +31,6 @@ asas
    }
   .button:hover{color: #FFF;}
   .button:focus{color: #FFF;}
-
-
-
-
-
-
-
 
               /* id  POISK*/
 .narez{color: #bd1111;
@@ -59,4 +45,7 @@ asas
 }
 .glatko:hover{color: #027a06;
         font-size: 20px;
+}
+@media  {
+
 }
