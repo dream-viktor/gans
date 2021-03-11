@@ -5,18 +5,19 @@
 #navbar{
   background: #bd1111;
   }           /* id NAV BAR*/
-
 .row  {
   display: flex;
   justify-content: space-between;
-
+  align-items: flex-end;
 }
-.header_menu  {
+.icon  {
+   display: none;
+
+ }
+.header_menu   {
   text-align: center;
   padding: 5px 15px 5px 10px;
   color: white;
-
-
 }
 .header_menu:hover {
   color: black;
@@ -46,6 +47,24 @@
 .glatko:hover{color: #027a06;
         font-size: 20px;
 }
-@media  {
+@media screen and (max-width: 500px) {
 
+ #navbar .container >.row   {
+    flex-direction: column;
+    align-items: center;
+    }
+  .header_menu{
+    display: none;
+  }
+  .click{
+    display: block;
+
+  }
+
+  .icon  {
+     display: block;
+     cursor: pointer;
+     padding: 5px 15px 5px 10px;
+
+   }
 }

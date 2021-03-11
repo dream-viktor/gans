@@ -18,7 +18,7 @@
 
  <section id="header_top">
    <div class="container">
-    <div class="row" >
+    <div class="row " >
                  <div class="header-logo  ">
                            <a href="#" >
                              <img src="C:\xampp\htdocs\wp-content\themes\mai\img\logo.jpeg"  alt="" >
@@ -38,7 +38,10 @@
                  </div>
                  <div class="header-user  ">
                    <p>Здравствуйте, Гость</p>
-                   <a href="#">Вход</a> или <a href="#">Регистрация</a>
+                   <div class="">
+
+                     <a href="#">Вход</a> или <a href="#">Регистрация</a>
+                   </div>
                  </div>
     </div>
     <div class="row zakon">
@@ -50,18 +53,20 @@
 
 <section id=navbar>
   <div class="container  ">
-          <div class="row">
+          <div class="row ">
 
-            <a class="header_menu" href="#">ОРУЖИЕ</a>
-            <a class="header_menu" href="#">ПАТРОНЫ</a>
-            <a class="header_menu" href="#">ЭКИПИРОВКА</a>
-            <a class="header_menu" href="#">ОПТИКА</a>
-            <a class="header_menu" href="#">НОЖИ</a>
-            <a class="header_menu" href="#">ПНЕВМАТИКА</a>
-            <a class="header_menu" href="#">ОРУЖИЕ САМООБОРОНЫ</a>
-            <a class="header_menu" href="#">КУПЛЮ</a>
+                <a class="icon" type="chekbox"  >МЕНЮ</a>
+                <a class="header_menu" href="#">ОРУЖИЕ</a>
+                <a class="header_menu" href="#">ПАТРОНЫ</a>
+                <a class="header_menu" href="#">ЭКИПИРОВКА</a>
+                <a class="header_menu" href="#">ОПТИКА</a>
+                <a class="header_menu" href="#">НОЖИ</a>
+                <a class="header_menu" href="#">ПНЕВМАТИКА</a>
+                <a class="header_menu" href="#">ОРУЖИЕ САМООБОРОНЫ</a>
+                <a class="header_menu" href="#">КУПЛЮ</a>
+            </nav>
 
-          </div>
+
 
     </div>
 </section>
@@ -78,7 +83,7 @@
                         <a class="narez" href="#">12</a>
                         <a class="narez"href="#">12</a>
                         </span>
-                        <button class="button btn-toggle col-auto" type="button" data-toggle="collapse" data-target="#poisk-filter" aria-expanded="false" aria-controls="poisk-filter">расширенный поиск</button>
+                        <button class="button btn-toggle " type="button" data-toggle="collapse" data-target="#poisk-filter" aria-expanded="false" aria-controls="poisk-filter">расширенный поиск</button>
                     </div>
        </div>
     </section>
@@ -95,6 +100,13 @@
                                   }
                               });
                         });
+                  $(document).ready(function(){
+                  	$(".icon").click(function(){
+                  		$(".header_menu").toggleClass("click");
+                      return false;
+                  	});
+                  });
+
               </script>
 
 
