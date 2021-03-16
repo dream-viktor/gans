@@ -1,15 +1,14 @@
 <?php
-
 class Database {
 
-    // укажите свои собственные учетные данные для базы данных 
+    // укажите свои собственные учетные данные для базы данных
     private $host = "91.227.16.12";
     private $db_name = "h156061_test";
     private $username = "h156061_root";
     private $password = "h156061_isaenko";
     public $conn;
 
-    // получение соединения с базой данных 
+    // получение соединения с базой данных
     public function getConnection() {
         $this->conn = null;
 
