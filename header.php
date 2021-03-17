@@ -1,18 +1,78 @@
-
+<?php
+    //Запускаем сессию
+    session_start();
+?>
 <!DOCTYPE HTML>
 <html>
  <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="style.css">
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/style.css" />
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
   <title>ХИЩНИК</title>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        "use strict";
+        //================ Проверка email ==================
+
+        //регулярное выражение для проверки email
+        var pattern = /^[a-z0-9][a-z0-9\._-]*[a-z0-9]*@([a-z0-9]+([a-z0-9-]*[a-z0-9]+)*\.)+[a-z]+/i;
+        var mail = $('input[name=email]');
+
+        mail.blur(function(){
+            if(mail.val() != ''){
+
+                // Проверяем, если введенный email соответствует регулярному выражению
+                if(mail.val().search(pattern) == 0){
+                    // Убираем сообщение об ошибке
+                    $('#valid_email_message').text('');
+
+                    //Активируем кнопку отправки
+                    $('input[type=submit]').attr('disabled', false);
+                }else{
+                    //Выводим сообщение об ошибке
+                    $('#valid_email_message').text('Не правильный Email');
+
+                    // Дезактивируем кнопку отправки
+                    $('input[type=submit]').attr('disabled', true);
+                }
+            }else{
+                $('#valid_email_message').text('Введите Ваш email');
+            }
+        });
+
+        //================ Проверка длины пароля ==================
+        var password = $('input[name=password]');
+
+        password.blur(function(){
+            if(password.val() != ''){
+
+                //Если длина введенного пароля меньше шести символов, то выводим сообщение об ошибке
+                if(password.val().length < 6){
+                    //Выводим сообщение об ошибке
+                    $('#valid_password_message').text('Минимальная длина пароля 6 символов');
+
+                    // Дезактивируем кнопку отправки
+                    $('input[type=submit]').attr('disabled', true);
+
+                }else{
+                    // Убираем сообщение об ошибке
+                    $('#valid_password_message').text('');
+
+                    //Активируем кнопку отправки
+                    $('input[type=submit]').attr('disabled', false);
+                }
+            }else{
+                $('#valid_password_message').text('Введите пароль');
+            }
+        });
+    });
+</script>
   </head>
   <body>
 
@@ -40,7 +100,7 @@
                    <p>Здравствуйте, Гость</p>
                    <div class="">
 
-                     <a href="#">Вход</a> или <a href="#">Регистрация</a>
+                     <a href="index.php">Вход</a> или <a href="reg.php">Регистрация</a>
                    </div>
                  </div>
     </div>
@@ -157,10 +217,3 @@
                </div>
          </div>
      </section>
-
-
-
-
- </body>
-
-</html>
